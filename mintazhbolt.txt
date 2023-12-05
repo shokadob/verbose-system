@@ -1,0 +1,32 @@
+
+namespace _2.zhminta
+{
+    public class Bolt
+    {
+        private Elado[] eladók;
+        private int kassza;
+        private int eladokSzama;
+
+        public Bolt() {
+            eladók = new Elado[20];
+            kassza = 0;
+            eladokSzama = 0;
+        }
+        void Vasarloerkezik(Vasarlo vasarlo)
+        {
+            if (vasarlo.RabloE == true) { kassza = 0; }
+            else
+            {
+                Random r = new Random();
+                eladók[r.Next(eladokSzama)].Elad(vasarlo, (SutiFajta) r.Next(1, 5)); //castolás
+
+
+            }
+        }
+        void EladotFelvesz(string nev, int kor, Stilus stilus)
+        {
+            eladokSzama = eladokSzama + 1;
+            eladók[eladokSzama] = new Elado(nev, kor, stilus);
+        }
+    }
+}

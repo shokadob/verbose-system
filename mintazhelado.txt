@@ -1,0 +1,41 @@
+
+namespace _2.zhminta
+{
+    public class Elado
+    {
+        private string nev;
+        private int kor; //adattag
+        private Stilus stilus;
+        private int kapottBorravalo = 0;
+        public string Nev //olvashato
+        {
+            get
+            {
+                return this.nev;
+            }
+        }
+        public int Kor
+        { get { return this.kor; } }
+        public Stilus Stilus { get { return this.stilus; } }
+        public int KapottBorravalo
+        {
+            get { return this.kapottBorravalo; }
+            set { this.kapottBorravalo = value; }
+        }
+
+        public Elado(string kapottnev, int kor, Stilus stilus)
+        {
+            this.nev = kapottnev; //adattag parameterkent
+            this.kor = kor;
+            this.stilus = stilus;
+        }
+        public int Elad(Vasarlo vasarlo, SutiFajta suti)
+        {
+            int osszeg = (int)suti * 500; //castolás, "bízz bennem"
+            if (vasarlo.KedvencSutiFajta == suti || stilus == Stilus.Kedves || stilus == Stilus.Lenyűgöző)
+            { osszeg = osszeg + 200; }
+            return osszeg;
+        }
+
+    }
+}

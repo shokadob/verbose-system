@@ -1,0 +1,13 @@
+  static void Import(Bolt bolt)
+  {
+      string[] eladoAdatok = File.ReadAllLines("eladok.txt");
+      for (int i = 0; i < eladoAdatok.Length; i++)
+      {
+          string sor = eladoAdatok[i];
+          string[] adatok = sor.Split(';');
+          string nev = adatok[0];
+          int kor = int.Parse(adatok[1]);
+          Stilus stilus = (Stilus)Enum.Parse(typeof(Stilus), adatok[2]);
+          bolt.EladotFelvesz(nev, kor, stilus);
+      }
+  }

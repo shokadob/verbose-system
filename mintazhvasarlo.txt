@@ -1,0 +1,20 @@
+namespace _2.zhminta
+{
+    public class Vasarlo
+    {
+        string nev;
+        SutiFajta kedvencSutiFajta;
+        bool rabloE;
+
+        public string Nev {get { return this.nev;} }
+        public SutiFajta KedvencSutiFajta { get {  return this.KedvencSutiFajta;} }
+        public bool RabloE { get {  return this.rabloE; } }
+        public Vasarlo(string nev, SutiFajta kedvencSutiFajta) 
+        {
+            Random random = new Random();
+            this.nev = nev;
+            this.kedvencSutiFajta = kedvencSutiFajta;
+            this.rabloE = random.Next(1, 101) <= 10;
+        }
+    }
+}

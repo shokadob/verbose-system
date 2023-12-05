@@ -1,0 +1,11 @@
+
+namespace _2.zhminta
+{
+    public enum SutiFajta
+    {
+        Keksz = 1,
+        Fánk = 2,
+        Muffin = 3,
+        Almatorta = 4
+    }
+}

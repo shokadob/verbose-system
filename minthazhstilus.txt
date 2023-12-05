@@ -1,0 +1,10 @@
+namespace _2.zhminta
+{
+    public enum Stilus
+    {
+        Morcos,
+        Lassú,
+        Kedves,
+        Lenyűgöző
+    }
+}
