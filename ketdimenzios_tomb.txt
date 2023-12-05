@@ -1,0 +1,12 @@
+            int homerokSzama = 10;
+            int idopontokSzama = 4;
+            int[,] homersekletek = new int[homerokSzama, idopontokSzama]; //hajnali, déli, késő délutáni, éjféli mérések
+            for (int i = 0; i < homerokSzama; i++)
+            {
+                for (int j = 0; j < idopontokSzama; j++)
+                {
+                    homersekletek[i, j] = 0;
+                    Console.Write(homersekletek[i, j] + " ");
+                }
+                Console.WriteLine();
+            }

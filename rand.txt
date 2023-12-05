@@ -1,0 +1,11 @@
+          Random r = new Random();
+
+          int randomMeret = r.Next(5, 11);
+          int[] randomSzamok = new int[randomMeret];
+
+          for (int i = 0; i < randomMeret; i++) 
+          {
+              Console.Write(i + ": ");
+              randomSzamok[i] = r.Next(1, 101);
+              Console.WriteLine(randomSzamok[i]);
+          }

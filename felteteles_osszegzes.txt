@@ -1,0 +1,8 @@
+            int osszeg3 = 0;
+            for (int i = 0; i < randomSzamok.Length; i++)
+            {
+                if (randomSzamok[i] % 3 == 0)
+                {
+                    osszeg = osszeg + randomSzamok[i];
+                }
+            }

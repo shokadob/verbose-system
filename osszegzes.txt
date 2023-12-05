@@ -1,0 +1,5 @@
+            int osszeg = 0;
+            for (int i = 0; i < randomSzamok.Length; i++)
+            {
+                osszeg = osszeg + randomSzamok[i];
+            }

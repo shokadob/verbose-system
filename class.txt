@@ -1,0 +1,49 @@
+namespace Gyakorlat_08_megoldas
+{
+    class Auto
+    {
+        #region 1. feladat
+        // Az autó tulajdonságai
+        public string Marka { get; set; }
+        public string Modell { get; set; }
+        public int Evjarat { get; set; }
+
+        // Konstruktor az autó létrehozásához
+        //Példány létrehozásakor meghívjuk
+
+        public Auto(string marka, string modell, int evjarat)
+        {
+            Marka = marka;
+            Modell = modell;
+            Evjarat = evjarat;
+        }
+
+        // Metódus az autó adatainak kiírásához
+        public void KiirAutoAdatai()
+        {
+            Console.WriteLine($"Marka: {Marka}, Modell: {Modell}, Évjárat: {Evjarat}");
+        }
+        #endregion
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            #region 1. feladat
+
+            // Autók létrehozása az osztály segítségével
+            Auto auto1 = new Auto("Toyota", "Camry", 2020);
+            Auto auto2 = new Auto("Ford", "Focus", 2019);
+
+            // Autók adatainak kiírása
+            Console.WriteLine("Auto 1 adatai:");
+            auto1.KiirAutoAdatai();
+
+            Console.WriteLine("\nAuto 2 adatai:");
+            auto2.KiirAutoAdatai();
+
+            #endregion
+		}
+	}
+}
